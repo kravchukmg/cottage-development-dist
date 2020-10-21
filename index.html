@@ -26,13 +26,6 @@
   />
   <link
     rel="preload"
-    href="/fonts/Roboto-Light/Roboto-Light.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin
-  />
-  <link
-    rel="preload"
     href="/fonts/Roboto-Medium/Roboto-Medium.woff2"
     as="font"
     type="font/woff2"
@@ -45,13 +38,13 @@
     type="font/woff2"
     crossorigin
   />
-  <link
-    rel="preload"
-    href="/fonts/Roboto-Thin/Roboto-Thin.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin
-  />
+
+  <!-- AOS -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Slick -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+  <!-- Main -->
   <link rel="stylesheet" type="text/css" href="css/style.min.css" />
 </head>
 
@@ -75,7 +68,7 @@
             <p class="banner__paragraph">
               Коттеджный городок возле парка Межигорье.
             </p>
-            <button class="banner__btn btn js-callback-btn-open">
+            <button class="banner__btn btn js-callback-btn-open" type="button">
               Записаться на просмотр
             </button>
           </div>
@@ -113,22 +106,30 @@
             <li class="item">
               <p><span>10</span> минут</p>
               <p>до метро Оболонь</p>
-              <p>.............. 11 км</p>
+              <p>
+                <i class="icon icon-car"></i>.............. 11 км
+              </p>
             </li>
             <li class="item">
               <p><span>3</span> минуты</p>
               <p>до парка Межигорье</p>
-              <p>.............. 300 м</p>
+              <p>
+                <i class="icon icon-walk"></i>.............. 300 м
+              </p>
             </li>
             <li class="item">
               <p><span>10</span> минут</p>
               <p>до метро Оболонь</p>
-              <p>.............. 11 км</p>
+              <p>
+                <i class="icon icon-walk"></i>.............. 11 км
+              </p>
             </li>
             <li class="item">
               <p><span>7</span> минут</p>
               <p>до метро Оболонь</p>
-              <p>.............. 1,6 км</p>
+              <p>
+                <i class="icon icon-bicycle"></i>.............. 1,6 км
+              </p>
             </li>
           </ul>
         </div>
@@ -169,7 +170,7 @@
                 <h4>Soul Home</h4>
                 <p>Площадь дома - 170 кв.м.</p>
                 <p>Площадь участка - до 6 соток</p>
-                <a class="btn" href="#">Подробнее</a>
+                <button class="btn js-popup-project-btn-open" type="button">Подробнее</button>
               </div>
             </div>
             <div class="section-2__impress-item" data-aos="fade-left">
@@ -184,7 +185,7 @@
                 <h4>Moon Loft</h4>
                 <p>Площадь дома - 200 кв.м.</p>
                 <p>Площадь участка - от 7,5 соток</p>
-                <a class="btn" href="#">Подробнее</a>
+                <button class="btn js-popup-project-btn-open" type="button">Подробнее</button>
               </div>
             </div>
           </div>
@@ -486,6 +487,36 @@
       </section>
     </main>
 
+    <div class="contacts">
+  <input type="checkbox" class="contacts__input" id="contacts__input">
+  <label class="contacts__label" for="contacts__input">
+    <svg class="contacts__icon-msg" width="35" height="32" viewBox="0 0 35 32" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11.2667 12.6981H23.3667M11.2667 16.4717H23.3667M4.8104 23.5777C2.4311 21.1909 1 18.1215 1 14.7736C1 7.16679 8.38723 1 17.5 1C26.6128 1 34 7.16679 34 14.7736C34 22.3804 26.6128 28.5472 17.5 28.5472C15.6278 28.5472 13.8286 28.2868 12.1511 27.8072L12 27.7925L5.03333 31V23.8219L4.8104 23.5777Z" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+    </svg>
+    <svg class="contacts__icon-cross" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 23 23">
+      <g fillrule="evenodd">
+        <path d="M10.314 -3.686H12.314V26.314H10.314z" transform="rotate(-45 11.314 11.314)"></path>
+        <path d="M10.314 -3.686H12.314V26.314H10.314z" transform="rotate(45 11.314 11.314)"></path>
+      </g>
+    </svg>
+  </label>
+  <a href="#" class="contacts__link">
+    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50Z" fill="#0087D0"></path><path d="M36.11 13.0399L9.40999 22.7999C8.86999 22.9999 8.85999 23.7999 9.38999 24.0299L16.23 26.7199L18.78 34.4099C18.93 34.8199 19.47 34.9599 19.81 34.6799L23.73 31.1899L31.17 35.9099C31.55 36.1499 32.06 35.9399 32.15 35.5099L36.99 13.7599C37.09 13.2799 36.59 12.8699 36.11 13.0599V13.0399ZM20.03 28.1599L19.6 32.1199L17.53 26.0299L32.1 16.8699L20.03 28.1699V28.1599Z" fill="white"></path>
+    </svg>
+  </a>
+  <a href="#" class="contacts__link">
+    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M25 43C34.9411 43 43 34.9411 43 25C43 15.0589 34.9411 7 25 7C15.0589 7 7 15.0589 7 25C7 34.9411 15.0589 43 25 43Z" fill="white"></path><path d="M25 0C11.194 0 0 11.194 0 25C0 38.806 11.194 50 25 50C38.806 50 50 38.806 50 25C50 11.194 38.806 0 25 0ZM24.063 12.977C24.247 12.973 24.439 13.002 24.604 13.002C24.671 13.002 24.734 12.996 24.787 12.982C30.735 13.198 35.924 18.605 35.817 24.552C35.817 25.092 36.033 25.958 35.167 25.958C34.302 25.958 34.519 25.093 34.519 24.444C34.4326 23.7048 34.3034 22.9712 34.132 22.247C33.9787 21.5995 33.7772 20.9644 33.529 20.347C33.1967 19.5117 32.7468 18.7281 32.193 18.02C30.586 15.991 28.146 14.827 24.679 14.28C24.139 14.173 23.381 14.28 23.381 13.632C23.381 13.069 23.705 12.977 24.063 12.977V12.977ZM32.248 24.768C31.275 24.877 31.49 24.011 31.383 23.471C30.733 19.686 29.436 18.281 25.544 17.415C25.004 17.307 24.139 17.415 24.246 16.551C24.355 15.686 25.219 16.011 25.761 16.119C29.653 16.551 32.789 19.794 32.789 23.471C32.681 23.903 33.005 24.661 32.249 24.769L32.248 24.768ZM29.869 22.823C29.869 23.255 29.869 23.795 29.22 23.903C28.788 23.903 28.571 23.579 28.463 23.147C28.355 21.525 27.489 20.66 25.868 20.443C25.436 20.335 24.895 20.227 25.11 19.577C25.22 19.145 25.65 19.145 26.085 19.145C27.923 19.038 29.869 20.984 29.869 22.823ZM35.924 34.718C35.275 36.556 33.004 38.394 31.058 38.394C30.842 38.286 30.301 38.286 29.761 38.069C21.327 34.393 15.055 28.445 11.594 19.795C10.404 16.983 11.702 14.497 14.623 13.523C14.8797 13.4163 15.155 13.3613 15.433 13.3613C15.711 13.3613 15.9863 13.4163 16.243 13.523C17.542 13.956 20.677 18.39 20.786 19.687C20.893 20.767 20.136 21.308 19.488 21.741C18.19 22.607 18.19 23.796 18.731 24.985C20.029 27.797 22.191 29.635 24.894 30.933C25.868 31.365 26.841 31.365 27.49 30.283C28.679 28.445 30.193 28.445 31.815 29.635C32.572 30.175 33.436 30.716 34.193 31.365C35.276 32.23 36.573 32.986 35.924 34.717V34.718Z" fill="#935BBE"></path>
+    </svg>
+  </a>
+  <a href="#" class="contacts__link">
+    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M25 0C11.2 0 0 11.2 0 25C0 38.8 11.2 50 25 50C38.8 50 50 38.8 50 25C50 11.2 38.84 0 25 0Z" fill="#004D73"></path><path d="M38.66 34.1001L32.44 27.7801C32.3435 27.6746 32.226 27.5904 32.0952 27.5327C31.9643 27.4751 31.8229 27.4453 31.68 27.4453C31.537 27.4453 31.3956 27.4751 31.2647 27.5327C31.1339 27.5904 31.0165 27.6746 30.92 27.7801L27.5 31.2001C26.81 31.8801 25.79 31.8801 25.1 31.2001L18.74 24.8301C18.5778 24.6751 18.4488 24.4889 18.3606 24.2826C18.2724 24.0764 18.227 23.8544 18.227 23.6301C18.227 23.4058 18.2724 23.1838 18.3606 22.9776C18.4488 22.7713 18.5778 22.5851 18.74 22.4301L22.16 19.0001C22.61 18.5601 22.61 17.9201 22.16 17.4801L15.9 11.3101C15.7943 11.209 15.6695 11.13 15.5329 11.0776C15.3963 11.0253 15.2506 11.0008 15.1045 11.0054C14.9583 11.0101 14.8145 11.0439 14.6815 11.1048C14.5485 11.1657 14.429 11.2525 14.33 11.3601C12.33 13.8101 8.65996 20.6201 18.73 30.9101L18.89 31.0601L19.03 31.2101C29.36 41.3501 36.16 37.6801 38.61 35.6701C39.1 35.2701 39.15 34.5401 38.66 34.1001Z" fill="white"></path>
+    </svg>
+  </a>
+</div>
+
     <footer class="footer" id="footer">
   <div class="container">
     <h5 data-aos="fade-right">Сrafted homes</h5>
@@ -509,9 +540,10 @@
     </div>
   </div>
 </footer>
- <div class="callback-popup js-callback-btn-close">
+
+    <div class="callback-popup js-callback-btn-close">
   <div class="callback-popup__inner">
-    <div class="js-callback-btn-close"></div>
+    <div class="callback-popup__btn-close js-callback-btn-close"></div>
     <h4 class="callback-popup__title">Записаться на просмотр</h4>
     <!-- Form -->
     <form class="form" action="form.php" method="post" autocomplete="off">
@@ -536,12 +568,222 @@
   </div>
 </div>
 
-    <!-- Lazyload -->
+    <div class="popup-project project-1">
+  <!-- Btn close -->
+  <button class="popup-project__btn-close js-popup-project-btn-close" type="button"></button>
+  <div class="popup-project__inner">
+    <div class="container">
+      <!-- Title -->
+      <h2 class="popup-project__title">Soul Home</h2>
+      <!-- Body -->
+      <div class="popup-project__body">
+        <div class="popup-project__slider">
+          <!-- Slider -->
+          <div class="slider">
+            <div class="slider__item">
+              <picture class="slider__picture">
+                <img src="img/popup-project-1/slider/1.jpg" alt="image" class="lazyload">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <picture class="slider__picture">
+                <img src="img/popup-project-1/slider/2.jpg" alt="image" class="lazyload">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <picture class="slider__picture">
+                <img src="img/popup-project-1/slider/3.jpg" alt="image" class="lazyload">
+              </picture>
+            </div>
+          </div>
+          <div class="slider__description">
+            <p>Дом, который одинаково хорошо смотрелся бы, как в горах Альп, так и возле парка Межигорье. Гостиная со вторым светом, большие панорамные окна и много пространства и солнца. А еще - потолки спален двойной высоты. Ну идеальный же!</p>
+            <ul>
+              <li>
+                <p>
+                  <span>170</span>
+                  кв.м
+                </p>
+                <p>
+                  Площадь дома
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>4</span>
+                </p>
+                <p>
+                  Спальни
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>6</span>
+                  соток
+                </p>
+                <p>
+                  Участок
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>249000</span>
+                  у.е.
+                </p>
+                <p>
+                  Стоимость дома
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="popup-project__price-includes price-includes">
+          <p>В стоимость входит:</p>
+          <ul>
+            <li>- отделка дома White Box</li>
+            <li>- обустройство теплых полов во всех комнатах</li>
+            <li>- ландшафтный дизайн с автополивом газон</li>
+            <li>- подключение всех коммуникаций</li>
+            <li>- навес на два автомобиля, включая подготовку для зарядки электромобилей</li>
+          </ul>
+        </div>
+        <div class="popup-project__plan plan">
+          <div class="plan__item">
+            <p>
+              <span>1</span>
+              этаж
+            </p>
+            <picture>
+              <img src="img/popup-project-1/plan/1.png" alt="image" class="lazyload">
+            </picture>
+          </div>
+          <div class="plan__item">
+            <p>
+              <span>2</span>
+              этаж
+            </p>
+            <picture>
+              <img src="img/popup-project-1/plan/2.png" alt="image" class="lazyload">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="popup-project project-2">
+  <!-- Btn close -->
+  <button class="popup-project__btn-close js-popup-project-btn-close" type="button"></button>
+  <div class="popup-project__inner">
+    <div class="container">
+      <!-- Title -->
+      <h2 class="popup-project__title">Moon Loft</h2>
+      <!-- Body -->
+      <div class="popup-project__body">
+        <div class="popup-project__slider">
+          <!-- Slider -->
+          <div class="slider">
+            <div class="slider__item">
+              <picture class="slider__picture">
+                <img src="img/popup-project-2/slider/1.jpg" alt="image" class="lazyload">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <picture class="slider__picture">
+                <img src="img/popup-project-2/slider/2.jpg" alt="image" class="lazyload">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <picture class="slider__picture">
+                <img src="img/popup-project-2/slider/3.jpg" alt="image" class="lazyload">
+              </picture>
+            </div>
+          </div>
+          <div class="slider__description">
+            <p>Дом, который одинаково хорошо смотрелся бы, как в горах Альп, так и возле парка Межигорье. Гостиная со вторым светом, большие панорамные окна и много пространства и солнца. А еще - потолки спален двойной высоты. Ну идеальный же!</p>
+            <ul>
+              <li>
+                <p>
+                  <span>200</span>
+                  кв.м
+                </p>
+                <p>
+                  Площадь дома
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>4</span>
+                </p>
+                <p>
+                  Спальни
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>7,5</span>
+                  соток
+                </p>
+                <p>
+                  Участок
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>298000</span>
+                  у.е.
+                </p>
+                <p>
+                  Стоимость дома
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="popup-project__price-includes price-includes">
+          <p>В стоимость входит:</p>
+          <ul>
+            <li>- отделка дома White Box</li>
+            <li>- обустройство теплых полов во всех комнатах</li>
+            <li>- ландшафтный дизайн с автополивом газон</li>
+            <li>- подключение всех коммуникаций</li>
+            <li>- навес на два автомобиля, включая подготовку для зарядки электромобилей</li>
+          </ul>
+        </div>
+        <div class="popup-project__plan plan">
+          <div class="plan__item">
+            <p>
+              <span>1</span>
+              этаж
+            </p>
+            <picture>
+              <img src="img/popup-project-2/plan/1.png" alt="image" class="lazyload">
+            </picture>
+          </div>
+          <div class="plan__item">
+            <p>
+              <span>2</span>
+              этаж
+            </p>
+            <picture>
+              <img src="img/popup-project-2/plan/2.png" alt="image" class="lazyload">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<!-- Lazyload -->
 <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 <!-- AOS -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <!-- Parallax -->
 <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+<!-- Slick -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <!-- Main -->
 <script src="js/main.min.js"></script>
 
